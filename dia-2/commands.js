@@ -17,6 +17,8 @@
 // SELECT DISTINCT Nome FROM Escola.Estudantes2;
 // SELECT DISTINCT Idade FROM Escola.Estudantes2;
 
+
+
 // ===>>> COUNT
 // SELECT COUNT(*) FROM sakila.actor;
 // SELECT COUNT(first_name) FROM sakila.actor;
@@ -30,6 +32,16 @@
 
 // SELECT COUNT(password) FROM sakila.staff;
 // SELECT COUNT(staff_id) FROM sakila.staff;
+
+
+// ===>>> LIMIT
+// SELECT * FROM sakila.rental LIMIT 10;
+
+
+// ===>>> LIMIT OFFSET
+// SELECT * FROM sakila.rental LIMIT 10 OFFSET 3;
+
+
 
 // CRIANDO UMA TABELA
 // CREATE DATABASE `Escola`;
