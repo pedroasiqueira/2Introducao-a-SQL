@@ -110,3 +110,19 @@ O que tiver dentro dos parenteses será "resolvido" primeiro.
      WHERE title LIKE 'E__%';
 
  */
+
+/**
+ * EXEMPLO DE IN
+ * 
+    Pesquisando nomes
+    SELECT * FROM sakila.actor 
+    WHERE first_name IN ('PENELOPE','NICK','ED','JENNIFER');
+ */
+
+/**
+ * EXEMPLO DE BETWEEN
+ * 
+    Trazendo resultas de números entre 50 e 120
+    SELECT title, length FROM sakila.film 
+    WHERE length BETWEEN 50 AND 120;
+ */
