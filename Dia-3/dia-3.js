@@ -40,3 +40,73 @@ WHERE (amount = 0.99 OR amount = 2.99) AND staff_id = 2;
 
 O que tiver dentro dos parenteses será "resolvido" primeiro.
  */
+
+
+/**
+ * EXEMPLOS DE WHERE
+ * 
+ * 
+      SELECT * FROM sakila.film
+      WHERE length > 50
+      ORDER BY length;
+
+      SELECT * FROM sakila.film
+      WHERE title <> "ALIEN CENTER"
+      AND replacement_cost > 20;
+
+      SELECT * FROM sakila.film
+      WHERE rating = 'G'
+      OR rating = 'PG'
+      OR RATING = 'PG-13';
+
+      SELECT * FROM sakila.rental
+      WHERE return_date IS NULL;
+
+      SELECT * FROM sakila.staff
+      WHERE active IS TRUE;
+
+      SELECT * FROM sakila.staff
+      WHERE active IS NOT TRUE;
+
+      SELECT * FROM sakila.address
+      WHERE address2 IS NOT NULL;
+
+      SELECT * FROM sakila.film
+      WHERE title NOT LIKE 'academy%';
+ */
+
+
+
+/**
+ * EXEMPLOS DE LIKE
+ * 
+     Para encontrar um filme que termina com "don"
+     SELECT * FROM sakila.film
+     WHERE title LIKE '%don';
+     
+     
+     Para encontrar um filme que que se inicia com "plu"
+     SELECT * FROM sakila.film
+     WHERE title LIKE 'plu%';
+
+     Para encontrar um filme que tenh "plu"
+     SELECT * FROM sakila.film
+     WHERE title LIKE '%plu%';
+
+     Para encontrar um filme que inicia com "p" e termina com "r"
+     SELECT * FROM sakila.film 
+     WHERE title LIKE 'p%r';
+
+     Para encontrar um filme que o segundo caractere da frase é "C"
+     SELECT * FROM sakila.film 
+     WHERE title LIKE '_C%';
+
+     Para encontrar um filme que possui exataemente 8 caracteres
+     SELECT * FROM sakila.film 
+     WHERE title LIKE '________';
+
+     Para encontrar todas as palavras com no mínimo 3 caraceres e que iniciam com E
+     SELECT * FROM sakila.film 
+     WHERE title LIKE 'E__%';
+
+ */
