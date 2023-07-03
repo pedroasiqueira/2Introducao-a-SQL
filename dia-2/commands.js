@@ -41,6 +41,24 @@
 // ===>>> LIMIT OFFSET
 // SELECT * FROM sakila.rental LIMIT 10 OFFSET 3;
 
+// ===>>> ORDER BY
+// SELECT * FROM sakila.address
+// ORDER BY address DESC;
+
+// SELECT * FROM sakila.actor
+// ORDER BY last_name, first_name DESC;
+// last_name está em ordem ASC e first_name está em ordem DESC
+// quando não coloca nenhum valor ele assimila o ASC
+
+
+
+// EXEMPLO:
+// 1- Selecione todos os dados da tabela.
+// 2- Crie uma query para encontrar os 20 primeiros filmes, incluindo o título, o ano de lançamento, a duração, a classificação indicativa e o custo de substituição.
+// 3- Ordene os resultados pelos filmes com a maior duração e depois pelo menor custo de substituição.
+// SELECT title, release_year, length, rating, replacement_cost FROM sakila.film
+// ORDER BY length DESC, replacement_cost ASC
+// LIMIT 20;
 
 
 // CRIANDO UMA TABELA
