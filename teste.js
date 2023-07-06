@@ -11,7 +11,7 @@
 // SELECT COUNT(product_name) FROM northwind.products;
 
 // Req-5
-// SELECT * FROM northwind.products LIMIT 13 OFFSET 3;
+// SELECT * FROM products LIMIT 13 OFFSET 3;
 // caso não esteja certo só ajustar o número do OFFSET
 
 // Req-6
@@ -23,7 +23,9 @@
 // SELECT id FROM northwind.products LIMIT 5 OFFSET 40;
 
 // Req-8
-// SELECT 5+6 'A','de' AS 'Trybe', 2+8 'eh';
+// SELECT CONCAT(first_name, ' ', last_name) full_name,
+// CONCAT(city, '-', state_province, ', ', address) location 
+// FROM employees;
 
 // Req-9
 // SELECT notes FROM northwind.purchase_orders WHERE notes <> 'NULL';
@@ -69,17 +71,43 @@
 // WHERE employee_id IN (5, 6) AND shipper_id = 2;
 
 // Req-20
+// INSERT INTO northwind.order_details (order_id, product_id, quantity, unit_price, discount, status_id, date_allocated, purchase_order_id, inventory_id)
+// VALUES (69, 80, 15.0000, 15.0000, 0, 2, NULL, NULL, 129);
 
 // Req-21
+// INSERT INTO northwind.order_details (order_id, product_id, quantity, unit_price, discount, status_id, date_allocated, purchase_order_id, inventory_id) VALUES
+// (69, 80, 15.0000, 15.0000, 0, 2, NULL, NULL, 129),
+// (69, 80, 15.0000, 15.0000, 0, 2, NULL, NULL, 129);
 
 // Req-22
+// UPDATE northwind.order_details
+// SET discount = 15
+// WHERE id BETWEEN 27 AND 94;
 
 // Req-23
+// UPDATE northwind.order_details
+// SET discount = 30
+// WHERE unit_price < 10.0000;
 
 // Req-24
+// UPDATE northwind.order_details
+// SET discount = 45
+// WHERE unit_price > 10.0000 AND id BETWEEN 30 AND 40;
 
 // Req-25
+// DELETE FROM northwind.order_details
+// WHERE unit_price < 10.0000;
 
 // Req-26
+// DELETE FROM northwind.order_details
+// WHERE unit_price > 10.0000;
 
 // Req-27
+// TRUNCATE northwind.order_details;
+
+
+
+// O código precisa estar em uma linha só ou identico ao workbench?
+// Essa senha que pede pra por nos testes, é a senha que usamos para gerar o container?
+
+// docker-compose up -d Tenho que fazer esse comando tbm?
